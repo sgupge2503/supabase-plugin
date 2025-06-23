@@ -1,0 +1,32 @@
+identity:
+  author: codex
+  name: supabase_plugin
+  label:
+    en_US: Supabase Plugin
+  description:
+    en_US: Query data from Supabase
+  icon: icon.svg
+  tags:
+    - database
+
+extra:
+  python:
+    source: provider/supabase_provider.py
+
+tools:
+  - tools/query_table.yaml
+
+endpoints:
+  - provider/supabase_endpoints.yaml
+
+credentials_for_provider:
+  supabase_url:
+    type: text-input
+    required: true
+    label:
+      en_US: Supabase URL
+  supabase_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Supabase Service Key

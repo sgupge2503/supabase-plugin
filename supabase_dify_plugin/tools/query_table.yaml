@@ -1,0 +1,41 @@
+identity:
+  name: query_table
+  author: codex
+  description:
+    en_US: Query rows from a Supabase table
+  icon: icon.svg
+  label:
+    en_US: Supabase Query
+  tags:
+    - database
+
+description:
+  human:
+    en_US: Query rows from a Supabase table
+  llm: Query rows from a Supabase table
+
+extra:
+  python:
+    source: tools/query_table.py
+
+parameters:
+  - name: table
+    type: string
+    required: true
+    label:
+      en_US: Table Name
+  - name: limit
+    type: number
+    required: false
+    default: 10
+    label:
+      en_US: Limit
+
+output_schema:
+  $schema: http://json-schema.org/draft-07/schema#
+  type: object
+  properties:
+    rows:
+      type: array
+      items:
+        type: object

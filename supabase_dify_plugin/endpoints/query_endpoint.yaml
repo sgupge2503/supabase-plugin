@@ -1,0 +1,5 @@
+path: "/supabase/query"
+method: "POST"
+extra:
+  python:
+    source: "endpoints/query_endpoint.py"
